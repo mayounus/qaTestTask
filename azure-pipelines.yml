@@ -6,13 +6,11 @@ stages:
     pool:
       name: Hosted Ubuntu 1604
     steps:
-    Settings:
     - task: CmdLine@2
       displayName: Install NewmanRunner
       inputs:
         script: 'sudo npm install -g newman'
         workingDirectory: $(System.DefaultWorkingDirectory)
-    Settings:
     - task: CmdLine@2
       displayName: Run Newman Tests
       continueOnError: true
